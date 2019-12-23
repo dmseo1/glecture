@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>지역변수와 전역변수</title>
+</head>
+<body>
+    <h3>지역변수와 전역변수</h3>
+    <hr>
+    <script>
+        var x = 100;
+        function f() {
+            var x = 1;
+            document.write("지역변수 x = " + x)
+            document.write("<br>");
+            document.write("전역변수 x = " + this.x); 
+        }
+
+        f();
+    
+    </script>
+</body>
+</html>
