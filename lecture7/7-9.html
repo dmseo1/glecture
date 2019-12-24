@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+    </script>
+
+    <input id="balance" type="text" readonly/>
+    <input id="deposit" type="button" value="입금" onClick="account.deposit()" />
+    <input id="withdraw" , type="button" value="출금" onClick="account.withdraw()" />
+
+    <script>
+
+        var account = new Object();
+        account.owner = "서동민";
+        account.code = "425";
+        account.balance = 10000000;
+
+        document.getElementById("balance").value = balance;
+        account.inquiry = function() {
+            return this.balance;
+        }
+        account.deposit = function() {
+            let money = prompt("저금할 금액을 입력하세요.");
+            money = parseInt(money);
+
+            if (isNaN(money) || money < 0) alert("정확한 값을 입력하세요.");
+            else {
+                this.balance += money;
+                document.getElementById("balance").value = this.balance;
+            }
+        }
+        account.withdraw = function() {
+            let money = prompt("출금할 금액을 입력하세요.");
+            money = parseInt(money);
+            if (isNaN(money) || money < 0) alert("정확한 값을 입력하세요.");
+            else {
+                this.balance -= money;
+                document.getElementById("balance").value = this.balance;
+            }
+        }
+
+        document.getElementById("balance").value = account.balance;
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+
+var date = new Date();
+var arr = new Array();
+arr[arr.length] = `${date.getFullYear()}년`;
+arr[arr.length] = `${date.getMonth()}월`
+arr[arr.length] = `${date.getDay()}일`
+arr[arr.length] = `${date.getHours()}시`
+arr[arr.length] = `${date.getMinutes()}분`
+arr[arr.length] = `${date.getSeconds()}초`
+arr[arr.length] = `${date.getMilliseconds()}`
+
+// arr.push(`${date.getFullYear()}년`);
+// arr.push(`${date.getMonth()}월`);
+// arr.push(`${date.getDay()}일`);
+// arr.push(`${date.getHours()}시`);
+// arr.push(`${date.getMinutes()}분`);
+// arr.push(`${date.getSeconds()}초`);
+// arr.push(`${date.getMilliseconds()}`);
+
+console.log(arr);
+
+for(let i = 0; i < arr.length; i ++) {
+    document.write(`${arr[i]} `);
+}
+
+
+</script>
+<body>
+    
+</body>
+</html>

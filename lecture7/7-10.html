@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var account = {
+            owner : "서동민",
+            code : "425",
+            balance : 10000000,
+            inquiry : function() {
+                document.write(`현재 잔고: ${this.balance}원<br>`);
+            },
+            deposit : function(money) {
+                document.write(`${money}원 입금<br>`);
+                this.balance += money;
+            },
+            withdraw : function(money) {
+                document.write(`${money}원 출금<br>`);
+                this.balance -= money;
+            }
+        }
+
+        account.inquiry();
+        account.deposit(5000);
+        account.inquiry();
+        account.withdraw(8000);
+        account.inquiry();
+        
+    </script>
+
+
+</body>
+</html>
