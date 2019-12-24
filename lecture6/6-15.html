@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>학점 계산기</title>
+</head>
+<script>
+    let score = prompt("당신의 점수를 입력하세요", 100);
+    let modifiedScore = Math.trunc(parseInt(score) / 10) * 10;
+    let grade;
+    switch(modifiedScore) {
+        case 100:
+        case 90:
+            grade = 'A';
+            break;
+        case 80:
+            grade = 'B';
+            break;
+        case 70:
+            grade = 'C';
+            break;
+        case 60:
+            grade = 'D';
+            break;
+        default:
+            grade = 'F';
+    }
+    document.write(`당신의 점수는 ${score}점, 당신의 등급은 ${grade}입니다.`);
+</script>
+
+<body>
+</body>
+
+</html>
