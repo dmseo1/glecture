@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function adder1(a, b) {
+        var sum;
+        sum = a + b;
+        return sum;
+    }
+    const adder2 = (a, b) => {
+        return a + b;
+    }
+    let n = adder1(24567, 98374);
+    let m = adder2(24567, 98374);
+    document.write(`24567 + 98374의 계산 결과<br>adder1 : ${n}, adder2 : ${m}<br>`)
+</script>
+<body>
+
+</body>
+</html>
