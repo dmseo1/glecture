@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const change = () => {
+            var p = document.getElementById("firstP");
+            p.innerHTML = "나의 <img src='./puppy.png'> 강아지";
+        }
+    </script>
+    <p id="firstP" style="color:blue" onclick="change()">여기에 <span style="color:red">클릭하세요</span></p>
+</body>
+</html>

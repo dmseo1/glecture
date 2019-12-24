@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        let change = () => {
+            var span = document.getElementsByTagName("span")[0];
+            span.style.color = "green";
+            span.style.fontSize ="20px";
+            span.style.display = "block";
+            span.style.width = "6em";
+            span.style.background ="red";
+            span.style.border = "5px dotted #1e90ff";
+            span.style.padding ="20px";
+            span.style.margin = "20px";
+        }
+    </script>
+</head>
+
+<body>
+    <p style="color:blue">이것은
+        <span id="mySpan" style="color:red">문장입니다.</span>
+    </p>
+    <input type="button" value="바꾸기" onClick="change()" />
+</body>
+
+</html>
