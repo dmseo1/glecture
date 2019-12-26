@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function createDiv() {
+            var parent = document.getElementById("parent");
+            var newDiv = document.createElement("div");
+            newDiv.innerHTML = "새로 생성된 div입니다";
+            newDiv.setAttribute("id", "myDiv");
+            newDiv.style.backgroundColor = "yellow";
+            newDiv.onclick = function() {
+                var p = this.parentElement;
+                p.removeChild(this);
+            }
+            parent.appendChild(newDiv);
+        }
+    </script>
+    <p id="parent">
+        <a href="javascript:createDiv()">DIV 생성</a>
+    </p>
+</body>
+</html>
