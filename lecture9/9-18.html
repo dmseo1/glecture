@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p><input type="checkbox" name="hat" value="10000" onclick="calc(this)"/> 모자: 10,000원</p>
+        <p><input type="checkbox" name="shoes" value="30000" onclick="calc(this)" /> 구두: 30,000원</p>
+        <p><input type="checkbox" name="bag" value="50000" onclick="calc(this)"/> 가방: 50,000원</p>
+        <p><input type="text" id="ret" value="0" readonly/></p>
+    </form>
+
+    <script>
+        function calc(obj) {
+            let ret = document.getElementById("ret");
+            if(obj.checked) {
+                ret.value = parseInt(ret.value) + parseInt(obj.value);
+            } else {
+                ret.value = parseInt(ret.value) - parseInt(obj.value);
+            }
+        }
+    </script>
+</body>
+</html>
