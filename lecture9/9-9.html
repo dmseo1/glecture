@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculate() {
+            let exp = document.getElementById("exp");
+            let cr = eval(exp.value);
+            let ret = document.getElementById("ret");
+            ret.value = cr;
+        }
+    </script>
+
+    <form>
+        <p><input id="exp" type="text" value=""/> 
+            <input id="btn" type="button" value="계산" onclick="calculate()"></p>
+        <p><input id="ret" type="text" value="" readonly></p>
+
+    </form>
+</body>
+</html>

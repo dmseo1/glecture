@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function query() {
+        let ret = confirm("구글로 이동하시겠습니까?");
+        console.log(ret);
+        return ret;
+    }
+
+    function noAction(e) {
+        alert("만 19세 미만은 선택할 수 없습니다");
+        e.preventDefault();
+    }
+</script>
+
+<body>
+    <a href="http://google.com" onclick="return query()" target="">구글로 이동</a>
+    <hr>
+    <form>
+        <p><input type="checkbox"/>빵(체크 됨)</p>
+        <p><input type="checkbox" onclick="noAction(event)"/>술(체크 안됨)</p>
+    </form>
+</body>
+</html>
