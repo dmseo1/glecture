@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./puppy.png" onmousemove="where(event)">
+
+    <div id="div" style="background-color:'#ff901e'"></div>
+    
+    <script>
+        function where(e) {
+            var text = `(screenX, screenY) = ${e.screenX}, ${e.screenY}<br>`;
+            text += `(clientX, clientY) = ${e.clientX}, ${e.clientY}<br>`;
+            text += `(offsetX, offsetY) = ${e.offsetX}, ${e.offsetY}<br>`;
+            text += `(x, y) = ${e.x}, ${e.y}`;
+            var div = document.getElementById("div");
+            div.innerHTML = text;
+        }
+    </script>
+</body>
+</html>
