@@ -17,15 +17,6 @@ app.on('request', (req, res) => {
     var curLength = 0; //현재 크기?
     
     res.writeHead(200, {"Content-Type":"images/jpg"});
-    res.write(`<html>
-                <head>
-                <title>다운로드 사이트</title>
-                </head>
-                <body>
-                파일을 다운로드중입니다...
-                </body>
-                </html>`);
-
     infile.on('readable', () => {
         var chunk;
         while((chunk = infile.read()) !== null) {
